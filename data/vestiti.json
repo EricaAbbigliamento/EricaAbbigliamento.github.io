@@ -1,0 +1,138 @@
+[
+  {
+    "id": "1",
+    "titolo": "Abito Elegante",
+    "descrizione": "Un elegante abito perfetto per serate speciali.",
+    "taglie": "S, M, L",
+    "materiale": "Seta 100%",
+    "immagine": "../immagini/abito_elegante.jpg"
+  },
+  {
+    "id": "2",
+    "titolo": "T-shirt Casual",
+    "descrizione": "Una comoda t-shirt in cotone per tutti i giorni.",
+    "taglie": "XS, S, M, L, XL",
+    "materiale": "Cotone 100%",
+    "immagine": "../immagini/t_shirt_casual.jpg"
+  },
+  {
+    "id": "3",
+    "titolo": "Gonna a Pieghe",
+    "descrizione": "Una gonna a pieghe versatile e alla moda.",
+    "taglie": "40, 42, 44",
+    "materiale": "Poliestere 100%",
+    "immagine": "../immagini/gonna_pieghe.jpg"
+  },
+  {
+    "id": "4",
+    "titolo": "Abito Elegante",
+    "descrizione": "Dettagli abito elegante.",
+    "taglie": "S, M",
+    "materiale": "Lino",
+    "immagine": "../immagini/vestito1.jpg"
+  },
+  {
+    "id": "5",
+    "titolo": "T-shirt Casual",
+    "descrizione": "Dettagli t-shirt casual.",
+    "taglie": "M, L",
+    "materiale": "Cotone",
+    "immagine": "../immagini/vestito2.jpg"
+  },
+  {
+    "id": "6",
+    "titolo": "Gonna a Pieghe",
+    "descrizione": "Dettagli gonna a pieghe.",
+    "taglie": "42, 46",
+    "materiale": "Jeans",
+    "immagine": "../immagini/vestito3.jpg"
+  },
+  {
+    "id": "7",
+    "titolo": "Pantaloni Chino",
+    "descrizione": "Dettagli pantaloni chino.",
+    "taglie": "48, 50",
+    "materiale": "Cotone",
+    "immagine": "../immagini/vestito4.jpg"
+  },
+  {
+    "id": "8",
+    "titolo": "Maglione di Lana",
+    "descrizione": "Dettagli maglione lana.",
+    "taglie": "M, L, XL",
+    "materiale": "Lana",
+    "immagine": "../immagini/vestito5.jpg"
+  },
+  {
+    "id": "9",
+    "titolo": "Giacca di Pelle",
+    "descrizione": "Dettagli giacca pelle.",
+    "taglie": "S, M",
+    "materiale": "Pelle",
+    "immagine": "../immagini/vestito6.jpg"
+  },
+  {
+    "id": "10",
+    "titolo": "Abito Floreale Leggero",
+    "descrizione": "Abito leggero per la primavera.",
+    "taglie": "S, M, L",
+    "materiale": "Cotone",
+    "immagine": "../immagini/vestito_primavera1.jpg"
+  },
+  {
+    "id": "11",
+    "titolo": "Giacca di Jeans",
+    "descrizione": "Giacca di jeans per la mezza stagione.",
+    "taglie": "S, M, L, XL",
+    "materiale": "Denim",
+    "immagine": "../immagini/vestito_primavera2.jpg"
+  },
+  {
+    "id": "12",
+    "titolo": "Top in Lino",
+    "descrizione": "Top fresco per l'estate.",
+    "taglie": "S, M",
+    "materiale": "Lino",
+    "immagine": "../immagini/vestito_estate1.jpg"
+  },
+  {
+    "id": "13",
+    "titolo": "Pantaloncini di Cotone",
+    "descrizione": "Pantaloncini comodi per l'estate.",
+    "taglie": "40, 42, 44",
+    "materiale": "Cotone",
+    "immagine": "../immagini/vestito_estate2.jpg"
+  },
+  {
+    "id": "14",
+    "titolo": "Maglione di Lana",
+    "descrizione": "Maglione caldo per l'autunno.",
+    "taglie": "M, L",
+    "materiale": "Lana",
+    "immagine": "../immagini/vestito_autunno1.jpg"
+  },
+  {
+    "id": "15",
+    "titolo": "Trench",
+    "descrizione": "Trench elegante per l'autunno.",
+    "taglie": "S, M, L",
+    "materiale": "Gabardine",
+    "immagine": "../immagini/vestito_autunno2.jpg"
+  },
+  {
+    "id": "16",
+    "titolo": "Cappotto di Lana",
+    "descrizione": "Cappotto caldo per l'inverno.",
+    "taglie": "46, 48, 50",
+    "materiale": "Lana",
+    "immagine": "../immagini/vestito_inverno1.jpg"
+  },
+  {
+    "id": "17",
+    "titolo": "Maglione Grosso",
+    "descrizione": "Maglione confortevole per l'inverno.",
+    "taglie": "M, L, XL",
+    "materiale": "Lana Merinos",
+    "immagine": "../immagini/vestito_inverno2.jpg"
+  }
+]

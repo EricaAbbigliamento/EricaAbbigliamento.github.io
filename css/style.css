@@ -1,0 +1,450 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0b0ff; /* Sfondo viola chiaro */
+    color: #333;
+    line-height: 1.6; /* Migliora la leggibilità */
+}
+
+header {
+    background-color: #9a32cd; /* Viola più scuro per l'header */
+    color: #fff;
+    padding: 1.5em 0; /* Aumentato il padding per un aspetto più arioso */
+    text-align: center;
+    border-radius: 0 0 10px 10px; /* Angoli smussati in basso */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leggera ombra */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0; /* Aggiunto margine superiore e inferiore */
+    text-align: center; /* Centra i link di navigazione */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px; /* Aggiunto padding per un'area cliccabile più grande */
+    border-radius: 5px; /* Angoli smussati per i link */
+    transition: background-color 0.3s ease; /* Transizione per l'hover */
+}
+
+nav a:hover {
+    background-color: #c77dff; /* Viola più chiaro all'hover */
+}
+
+main {
+    padding: 30px; /* Aumentato il padding principale */
+}
+
+#notizie, #in-evidenza {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 25px; /* Aumentato il padding interno */
+    border-radius: 12px; /* Angoli più smussati */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra più pronunciata */
+}
+
+#notizie h2, #in-evidenza h2 {
+    color: #9a32cd; /* Viola per i titoli di sezione */
+    margin-bottom: 20px;
+}
+
+.notizia {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.notizia:last-child {
+    border-bottom: none;
+}
+
+.vetrina {
+    display: flex;
+    gap: 25px; /* Aumentato il gap tra gli elementi */
+    overflow-x: auto;
+    padding-bottom: 15px; /* Spazio inferiore per lo scroll orizzontale */
+}
+
+.vestito {
+    flex: 0 0 auto;
+    width: 220px; /* Leggermente più largo */
+    border: 1px solid #ddd;
+    border-radius: 12px; /* Angoli più smussati */
+    padding: 15px; /* Aumentato il padding interno */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Leggera ombra individuale */
+}
+
+.immagine-container {
+    width: 100%;
+    height: 300px; /* Altezza fissa per il ritaglio (puoi modificarla) */
+    overflow: hidden;
+    border-radius: 8px; /* Angoli smussati per l'immagine */
+    margin-bottom: 15px;
+}
+
+.immagine-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ritrappa l'immagine per coprire il contenitore */
+    transition: transform 0.3s ease-in-out; /* Effetto hover sull'immagine */
+}
+
+.vestito:hover .immagine-container img {
+    transform: scale(1.05);
+}
+
+.vestito h3 {
+    margin-top: 0;
+    color: #555;
+}
+
+.vestito p {
+    color: #777;
+    font-size: 0.9em;
+}
+
+.vestito button {
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px; /* Aumentato il padding del bottone */
+    border-radius: 8px; /* Angoli più smussati per il bottone */
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.vestito button:hover {
+    background-color: #4cae4c;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 25px 0; /* Aumentato il padding del footer */
+    text-align: center;
+    border-radius: 10px 10px 0 0; /* Angoli smussati in alto */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Leggera ombra superiore */
+}
+
+.contatti {
+    margin-bottom: 20px;
+}
+
+.contatti h3 {
+    color: #ddd;
+}
+
+.social a {
+    display: inline-block;
+    margin: 0 15px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.social a:hover {
+    opacity: 1;
+}
+
+.social img {
+    width: 35px; /* Imposta una larghezza fissa per le icone social */
+    height: auto; /* L'altezza si adatterà proporzionalmente */
+}
+/* Stili per la visualizzazione in evidenza (Popup) */
+#vestito-in-evidenza {
+    display: none; /* Inizialmente nascosto */
+    position: fixed; /* Sovrappone il contenuto */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Sfondo semi-trasparente per l'effetto "sfocato" */
+    z-index: 1000; /* Assicura che sia sopra tutto */
+    justify-content: center;
+    align-items: center;
+}
+
+.dettagli-vestito {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 80%; /* Imposta una larghezza massima */
+    max-height: 80%; /* Imposta un'altezza massima */
+    overflow-y: auto; /* Permette lo scrolling se il contenuto è troppo lungo */
+    text-align: center;
+    position: relative; /* Necessario per posizionare il bottone di chiusura */
+}
+
+.dettagli-vestito img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+.dettagli-vestito h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.dettagli-vestito p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.dettagli-vestito .taglie {
+    margin-bottom: 10px;
+}
+
+.dettagli-vestito .materiale {
+    margin-bottom: 15px;
+}
+
+.dettagli-vestito button.chiudi-dettagli {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #777;
+}
+
+/* Stili per la pagina "Tutti i Vestiti" */
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+}
+
+.vestito-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.vestito-card__image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.vestito-card__image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.vestito-card__info {
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permetti a questa sezione di espandersi per occupare lo spazio */
+    justify-content: space-between; /* Distribuisci lo spazio tra gli elementi interni */
+    align-items: center; /* Centra orizzontalmente il contenuto */
+}
+
+.vestito-card__title {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.vestito-card__description {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.vestito-card__button {
+    background-color: #5cb85c; /* Stesso colore della home */
+    color: #fff;
+    border: none;
+    padding: 10px 20px; /* Stesso padding della home */
+    border-radius: 8px; /* Stessi angoli della home */
+    cursor: pointer;
+    font-size: 1em; /* Stessa dimensione testo della home */
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Se sono link */
+    display: inline-block; /* Si adattano al contenuto */
+    width: auto; /* Larghezza automatica */
+    margin-top: auto; /* Spingi in basso */
+    text-align: center; /* Centra il testo */
+}
+
+.vestito-card__button:hover {
+    background-color: #4cae4c; /* Stesso hover della home */
+}
+
+/* Stili per la pagina "Categorie" */
+.stagione-container {
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+}
+
+.vestiti-per-riga {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.vestito-thumbnail {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    width: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Disponi gli elementi interni in colonna */
+    height: auto; /* Assicurati che l'altezza si adatti al contenuto */
+    align-items: center; /* Centra orizzontalmente gli elementi */
+    justify-content: space-between; /* Distribuisce lo spazio verticalmente */
+}
+
+.vestito-thumbnail__image-container {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+}
+
+.vestito-thumbnail__image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.vestito-thumbnail__title {
+    margin: 10px 0 5px;
+    color: #333;
+    font-size: 0.9em;
+    padding: 0 10px;
+}
+
+.vestito-thumbnail__button {
+    background-color: #5cb85c; /* Stesso colore della home */
+    color: #fff;
+    border: none;
+    padding: 8px 15px; /* Adattato al padding attuale */
+    border-radius: 8px; /* Stessi angoli della home */
+    cursor: pointer;
+    font-size: 0.8em; /* Adattato alla dimensione testo attuale */
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Spingi in basso */
+    text-decoration: none; /* Se sono link */
+    display: inline-block; /* Si adattano al contenuto */
+    width: auto; /* Larghezza automatica */
+    text-align: center; /* Centra il testo */
+    margin-bottom: 10px
+}
+
+.vestito-thumbnail__button:hover {
+    background-color: #4cae4c; /* Stesso hover della home */
+}
+/* ... altri stili ... */
+
+/* Stili per la pagina "Categorie" con colori per stagione */
+.categoria-primavera {
+    background-color: #f0fff0; /* Verde chiaro per la primavera */
+}
+
+.categoria-estate {
+    background-color: #fffacd; /* Giallo chiaro per l'estate */
+}
+
+.categoria-autunno {
+    background-color: #ffe4c4; /* Beige chiaro per l'autunno */
+}
+
+.categoria-inverno {
+    background-color: #f0f8ff; /* Azzurro chiaro per l'inverno */
+}
+
+.stagione-container {
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px; /* Manteniamo il bordo arrotondato */
+}
+
+.vestiti-per-riga {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 20px;
+    max-width: 600px; /* Limita la larghezza della sezione */
+}
+
+
+/* Media query per schermi più piccoli (telefoni) */
+@media (max-width: 768px) { /* 768px è un breakpoint comune per i tablet, puoi regolarlo */
+    .vestiti-per-riga {
+        display: grid; /* Passa a una griglia */
+        grid-template-columns: repeat(2, 1fr); /* Crea 2 colonne di uguale larghezza */
+        gap: 15px; /* Riduci un po' il gap per schermi piccoli */
+    }
+
+    .vestito-thumbnail {
+        width: auto; /* La larghezza si adatterà alla colonna della griglia */
+    }
+    .catalogo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Forza 2 colonne */
+        gap: 15px; /* Spazio tra le card */
+    }
+
+    .vestito-card {
+        /* Riduci il padding interno della card */
+        padding: 10px;
+    }
+
+    .vestito-card__image-container {
+        height: 150px; /* Riduci l'altezza dell'immagine */
+    }
+
+    .vestito-card__title {
+        font-size: 0.9em; /* Riduci la dimensione del titolo */
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .vestito-card__description {
+        font-size: 0.8em; /* Riduci la dimensione della descrizione */
+        margin-bottom: 5px;
+        /* Potresti anche limitare il numero di righe */
+        /* overflow: hidden; */
+        /* text-overflow: ellipsis; */
+        /* display: -webkit-box; */
+        /* -webkit-line-clamp: 2; */
+        /* -webkit-box-orient: vertical; */
+    }
+
+    .vestito-card__button {
+        font-size: 0.8em; /* Riduci la dimensione del testo del bottone */
+        padding: 8px 12px; /* Riduci il padding del bottone */
+    }
+}

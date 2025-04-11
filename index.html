@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IL NEGOZIO DI GIO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Stili specifici per la home page (potresti volerli spostare in style.css se usati altrove) */
+        .vetrina {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto; /* Permette lo scorrimento orizzontale se ci sono molti elementi */
+            padding: 20px 0;
+        }
+
+        .vestito {
+            flex: 0 0 auto; /* Non si espande né si restringe, dimensione automatica */
+            width: 250px; /* Larghezza fissa per ogni vestito */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .immagine-container {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .immagine-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .vestito h3 {
+            margin-top: 0;
+            color: #555;
+            font-size: 1.2em;
+        }
+
+        .vestito p {
+            color: #777;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .vedi-dettagli {
+            background-color: #5cb85c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .vedi-dettagli:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>IL NEGOZIO DI GIO</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pagine/tutti_i_vestiti.html">Tutti i Vestiti</a></li>
+                <li><a href="pagine/categorie.html">Categorie</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="notizie">
+            <h2>Ultime Novità</h2>
+            <div class="notizia">
+                <h3>Nuova Collezione Primavera/Estate!</h3>
+                <p>Scopri i nuovi arrivi freschi e colorati per la stagione!</p>
+                <a href="pagine/tutti_i_vestiti.html">Guarda ora</a>
+            </div>
+        </section>
+
+        <section id="in-evidenza">
+            <h2>Vestiti in Evidenza</h2>
+            <div class="vetrina">
+                </div>
+        </section>
+
+        <div id="vestito-in-evidenza" style="display: none;">
+            <div class="dettagli-vestito">
+                <button class="chiudi-dettagli">&times;</button>
+                <img src="" alt="">
+                <h3></h3>
+                <p class="descrizione"></p>
+                <p class="taglie"></p>
+                <p class="materiale"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contatti">
+            <h3>Chatta con Noi:</h3>
+            <div class="social">
+                <a href="[INSERISCI IL TUO LINK INSTAGRAM]" target="_blank"><img src="immagini/instagram_icon.png" alt="Instagram"></a>
+                <a href="https://wa.me/[IL TUO NUMERO DI TELEFONO CON IL PREFISSO]" target="_blank"><img src="immagini/whatsapp_icon.png" alt="WhatsApp"></a>
+                <a href="[INSERISCI IL TUO LINK FACEBOOK]" target="_blank"><img src="immagini/facebook_icon.png" alt="Facebook"></a>
+            </div>
+        </div>
+        <p>&copy; 2025 IL NEGOZIO DI GIO - Tutti i diritti riservati.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
