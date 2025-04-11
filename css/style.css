@@ -16,6 +16,62 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leggera ombra */
 }
 
+@font-face {
+    font-family: 'FontForte'; /* Dai un nome al tuo font */
+    src: url('../fonts/Akira\ Expanded\ Demo.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Ottimizza il caricamento del font */
+}
+
+.title {
+    font-family: 'FontForte';
+    color: #ffffff; /* Colore del testo */
+    /*text-shadow:
+        -1px -1px 0 black, /* Ombra in alto a sinistra */
+        /*1px -1px 0 black,  /* Ombra in alto a destra */
+        /*-1px 1px 0 black,  /* Ombra in basso a sinistra */
+        /*1px 1px 0 black;   /* Ombra in basso a destra */
+    word-wrap: break-word;
+    overflow-wrap: break-word; /* Per maggiore compatibilità */
+}
+
+.title_dark {
+    font-family: 'FontForte';
+    color: #181818; /* Colore del testo */
+    /*text-shadow:
+        -1px -1px 0 black, /* Ombra in alto a sinistra */
+        /*1px -1px 0 black,  /* Ombra in alto a destra */
+        /*-1px 1px 0 black,  /* Ombra in basso a sinistra */
+        /*1px 1px 0 black;   /* Ombra in basso a destra */
+    word-wrap: break-word;
+    overflow-wrap: break-word; /* Per maggiore compatibilità */
+}
+
+.title_outline {
+    font-family: 'FontForte';
+    color: #ffffff; /* Colore del testo */
+    text-shadow:
+        -1px -1px 0 #181818, /* Ombra in alto a sinistra */
+        1px -1px 0 #181818,  /* Ombra in alto a destra */
+        -1px 1px 0 #181818,  /* Ombra in basso a sinistra */
+        1px 1px 0 #181818;   /* Ombra in basso a destra */
+    word-wrap: break-word;
+    overflow-wrap: break-word; /* Per maggiore compatibilità */
+}
+
+.title_outline_dark {
+    font-family: 'FontForte';
+    color: #181818; /* Colore del testo */
+    text-shadow:
+        -1px -1px 0 rgba(255, 255, 255, 0.872), /* Ombra in alto a sinistra */
+        1px -1px 0 black,  /* Ombra in alto a destra */
+        -1px 1px 0 black,  /* Ombra in basso a sinistra */
+        1px 1px 0 black;   /* Ombra in basso a destra */
+    word-wrap: break-word;
+    overflow-wrap: break-word; /* Per maggiore compatibilità */
+}
+
 nav ul {
     list-style: none;
     padding: 0;
