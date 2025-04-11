@@ -17,60 +17,62 @@ header {
 }
 
 @font-face {
-    font-family: 'FontForte'; /* Dai un nome al tuo font */
-    src: url('../fonts/Akira\ Expanded\ Demo.otf') format('truetype');
+    font-family: 'Roboto'; /* Dai un nome al tuo font */
+    src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Ottimizza il caricamento del font */
+}
+@font-face {
+    font-family: 'Title'; /* Dai un nome al tuo font */
+    src: url('../fonts/StretchPro.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap; /* Ottimizza il caricamento del font */
 }
 
-.title {
-    font-family: 'FontForte';
+.title_white {
+    font-family: 'Title';
     color: #ffffff; /* Colore del testo */
-    /*text-shadow:
-        -1px -1px 0 black, /* Ombra in alto a sinistra */
-        /*1px -1px 0 black,  /* Ombra in alto a destra */
-        /*-1px 1px 0 black,  /* Ombra in basso a sinistra */
-        /*1px 1px 0 black;   /* Ombra in basso a destra */
-    word-wrap: break-word;
-    overflow-wrap: break-word; /* Per maggiore compatibilità */
+    word-wrap: normal;
+    overflow-wrap: normal; /* Per maggiore compatibilità */
+}
+
+.title_Color {
+    font-family: 'Title';
+    color: #9a32cd; /* Colore del testo */
+    word-wrap: normal;
+    overflow-wrap: normal; /* Per maggiore compatibilità */
 }
 
 .title_dark {
-    font-family: 'FontForte';
+    font-family: 'Title';
     color: #181818; /* Colore del testo */
-    /*text-shadow:
-        -1px -1px 0 black, /* Ombra in alto a sinistra */
-        /*1px -1px 0 black,  /* Ombra in alto a destra */
-        /*-1px 1px 0 black,  /* Ombra in basso a sinistra */
-        /*1px 1px 0 black;   /* Ombra in basso a destra */
-    word-wrap: break-word;
-    overflow-wrap: break-word; /* Per maggiore compatibilità */
+    word-wrap: normal;
+    overflow-wrap: normal; /* Per maggiore compatibilità */
 }
 
-.title_outline {
-    font-family: 'FontForte';
-    color: #ffffff; /* Colore del testo */
+.outline_white {
     text-shadow:
         -1px -1px 0 #181818, /* Ombra in alto a sinistra */
         1px -1px 0 #181818,  /* Ombra in alto a destra */
         -1px 1px 0 #181818,  /* Ombra in basso a sinistra */
         1px 1px 0 #181818;   /* Ombra in basso a destra */
-    word-wrap: break-word;
-    overflow-wrap: break-word; /* Per maggiore compatibilità */
 }
 
-.title_outline_dark {
-    font-family: 'FontForte';
-    color: #181818; /* Colore del testo */
+.outline_white {
     text-shadow:
         -1px -1px 0 rgba(255, 255, 255, 0.872), /* Ombra in alto a sinistra */
-        1px -1px 0 black,  /* Ombra in alto a destra */
-        -1px 1px 0 black,  /* Ombra in basso a sinistra */
-        1px 1px 0 black;   /* Ombra in basso a destra */
-    word-wrap: break-word;
-    overflow-wrap: break-word; /* Per maggiore compatibilità */
+        1px -1px 0 rgb(255, 255, 255),  /* Ombra in alto a destra */
+        -1px 1px 0 rgb(255, 255, 255),  /* Ombra in basso a sinistra */
+        1px 1px 0 rgb(255, 255, 255);   /* Ombra in basso a destra */
 }
+
+.no_ligatures{
+    font-variant-ligatures: none;
+}
+
+
 
 nav ul {
     list-style: none;
@@ -216,18 +218,51 @@ footer {
     width: 35px; /* Imposta una larghezza fissa per le icone social */
     height: auto; /* L'altezza si adatterà proporzionalmente */
 }
-/* Stili per la visualizzazione in evidenza (Popup) */
+
 #vestito-in-evidenza {
     display: none; /* Inizialmente nascosto */
-    position: fixed; /* Sovrappone il contenuto */
+    position: fixed; /* Lo fissa alla finestra del browser */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Sfondo semi-trasparente per l'effetto "sfocato" */
-    z-index: 1000; /* Assicura che sia sopra tutto */
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Sfondo scuro semitrasparente */
+    z-index: 1000; /* Assicura che sia sopra altri elementi */
+    justify-content: center; /* Centra orizzontalmente il contenuto */
+    align-items: center; /* Centra verticalmente il contenuto */
+}
+
+#vestito-in-evidenza .dettagli-vestito {
+    padding: 20px; /* Mantieni un padding adeguato */
+    max-width: 80%; /* Limita la larghezza massima su schermi grandi */
+    max-height: 80%; /* Limita l'altezza massima */
+}
+
+#vestito-in-evidenza .dettagli-vestito img {
+    max-height: 50vh; /* Riduci l'altezza massima dell'immagine in generale */
+    margin-bottom: 15px;
+}
+
+#vestito-in-evidenza .dettagli-vestito h3 {
+    font-size: 1.5em; /* Riduci leggermente la dimensione del titolo su desktop */
+    margin-bottom: 10px;
+}
+
+#vestito-in-evidenza .dettagli-vestito p {
+    font-size: 1em; /* Mantieni una dimensione del testo standard */
+    margin-bottom: 10px;
+}
+
+#vestito-in-evidenza .dettagli-vestito .taglie,
+#vestito-in-evidenza .dettagli-vestito .materiale {
+    font-size: 1em; /* Mantieni una dimensione del testo standard */
+    margin-bottom: 15px;
+}
+
+#vestito-in-evidenza .dettagli-vestito button.chiudi-dettagli {
+    font-size: 1.5em; /* Mantieni una dimensione adeguata per il bottone di chiusura */
+    top: 10px;
+    right: 10px;
 }
 
 .dettagli-vestito {
@@ -285,6 +320,14 @@ footer {
     padding: 20px;
     background-color: #f8f8f8;
     border-radius: 10px;
+}
+
+.vestiti-per-riga {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 20px;
+    max-width: 600px; /* Limita la larghezza della sezione */
 }
 
 .vestito-card {
@@ -360,13 +403,6 @@ footer {
     border-radius: 10px;
 }
 
-.vestiti-per-riga {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding-top: 20px;
-}
-
 .vestito-thumbnail {
     background-color: #fff;
     border: 1px solid #eee;
@@ -422,9 +458,7 @@ footer {
 .vestito-thumbnail__button:hover {
     background-color: #4cae4c; /* Stesso hover della home */
 }
-/* ... altri stili ... */
 
-/* Stili per la pagina "Categorie" con colori per stagione */
 .categoria-primavera {
     background-color: #f0fff0; /* Verde chiaro per la primavera */
 }
@@ -447,17 +481,20 @@ footer {
     border-radius: 10px; /* Manteniamo il bordo arrotondato */
 }
 
-.vestiti-per-riga {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding-top: 20px;
-    max-width: 600px; /* Limita la larghezza della sezione */
-}
-
 
 /* Media query per schermi più piccoli (telefoni) */
 @media (max-width: 768px) { /* 768px è un breakpoint comune per i tablet, puoi regolarlo */
+    
+    header h1 {
+        font-size: 1.5em; /* Prova con questa dimensione come punto di partenza */
+        padding: 0 10px;  /* Mantieni un po' di padding laterale */
+    }
+
+    /* Potresti anche dover ridurre il padding dell'header stesso se necessario */
+    header {
+        padding: 1em 0;
+    }
+
     .vestiti-per-riga {
         display: grid; /* Passa a una griglia */
         grid-template-columns: repeat(2, 1fr); /* Crea 2 colonne di uguale larghezza */
@@ -502,5 +539,57 @@ footer {
     .vestito-card__button {
         font-size: 0.8em; /* Riduci la dimensione del testo del bottone */
         padding: 8px 12px; /* Riduci il padding del bottone */
+    }
+
+    .vestito-thumbnail__button {
+        background-color: #5cb85c; /* Stesso colore della home */
+        color: #fff;
+        border: none;
+        padding: 8px 15px; /* Adattato al padding attuale */
+        border-radius: 8px; /* Stessi angoli della home */
+        cursor: pointer;
+        font-size: 0.8em; /* Adattato alla dimensione testo attuale */
+        transition: background-color 0.3s ease;
+        margin-top: auto; /* Spingi in basso */
+        text-decoration: none; /* Se sono link */
+        display: inline-block; /* Si adattano al contenuto */
+        width: auto; /* Larghezza automatica */
+        text-align: center; /* Centra il testo */
+        margin-bottom: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    #vestito-in-evidenza .dettagli-vestito {
+        padding: 15px;
+        max-width: 95%;
+        max-height: 90%;
+    }
+
+    #vestito-in-evidenza .dettagli-vestito img {
+        max-height: 40vh;
+        margin-bottom: 10px;
+    }
+
+    #vestito-in-evidenza .dettagli-vestito h3 {
+        font-size: 1.3em;
+        margin-bottom: 8px;
+    }
+
+    #vestito-in-evidenza .dettagli-vestito p {
+        font-size: 0.9em;
+        margin-bottom: 8px;
+    }
+
+    #vestito-in-evidenza .dettagli-vestito .taglie,
+    #vestito-in-evidenza .dettagli-vestito .materiale {
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+
+    #vestito-in-evidenza .dettagli-vestito button.chiudi-dettagli {
+        font-size: 1.2em;
+        top: 8px;
+        right: 8px;
     }
 }
