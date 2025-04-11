@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const dettagliDescrizione = dettagliVestitoDiv.querySelector('.descrizione');
     const dettagliTaglie = dettagliVestitoDiv.querySelector('.taglie');
     const dettagliMateriale = dettagliVestitoDiv.querySelector('.materiale');
+    const dettagliPrezzo = dettagliVestitoDiv.querySelector('.prezzo');
 
     let dettagliData = []; // Array per contenere i dati caricati
 
@@ -127,6 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     dettagliDescrizione.textContent = vestitoDettagli.descrizione || 'Descrizione non disponibile';
                     dettagliTaglie.textContent = vestitoDettagli.taglie ? `Taglie disponibili: ${vestitoDettagli.taglie}` : 'Taglie non disponibili';
                     dettagliMateriale.textContent = vestitoDettagli.materiale ? `Materiale: ${vestitoDettagli.materiale}` : 'Materiale non disponibile';
+                    dettagliPrezzo.textContent = vestitoDettagli.prezzo ? `Prezzo: ${vestitoDettagli.prezzo}` : 'Prezzo non disponibile';
                     vestitoInEvidenzaDiv.style.display = 'flex';
                 }
             });

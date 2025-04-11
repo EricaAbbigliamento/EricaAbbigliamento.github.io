@@ -5,66 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ERICA ABBIGLIAMENTO</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* Stili specifici per la home page (potresti volerli spostare in style.css se usati altrove) */
-        .vetrina {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto; /* Permette lo scorrimento orizzontale se ci sono molti elementi */
-            padding: 20px 0;
-        }
-
-        .vestito {
-            flex: 0 0 auto; /* Non si espande né si restringe, dimensione automatica */
-            width: 250px; /* Larghezza fissa per ogni vestito */
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
-
-        .immagine-container {
-            width: 100%;
-            height: 200px;
-            overflow: hidden;
-            border-radius: 6px;
-            margin-bottom: 10px;
-        }
-
-        .immagine-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .vestito h3 {
-            margin-top: 0;
-            color: #555;
-            font-size: 1.2em;
-        }
-
-        .vestito p {
-            color: #777;
-            font-size: 0.9em;
-            margin-bottom: 10px;
-        }
-
-        .vedi-dettagli {
-            background-color: #5cb85c;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
-        }
-
-        .vedi-dettagli:hover {
-            background-color: #4cae4c;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -102,6 +42,7 @@
                 <p class="descrizione"></p>
                 <p class="taglie"></p>
                 <p class="materiale"></p>
+                <p class="prezzo"></p>
             </div>
         </div>
     </main>
